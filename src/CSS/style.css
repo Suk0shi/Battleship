@@ -1,0 +1,24 @@
+.playerBoard,
+.computerBoard {
+    display: grid;
+    grid-template-columns: repeat(10, 25px);
+}
+
+.cell {
+    border-style: solid;
+    width: 20px;
+    height: 20px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.hit {
+    background-color: red;
+}
+
+.miss {
+    background-color: grey;
+}
