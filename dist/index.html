@@ -1,26 +1,29 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Battleship</title>
-    <script src="main.js" defer></script>
-  </head>
-  <body>
-    <img class="title" src="./Images/battleshipTitle.png" alt="Battleship">
-    <div class="content">
-      <h3 class="heading">Your Board</h3>
-      <h3 class="heading">Computer Board</h3>
-      <div class="playerBoardWrap">
-        <div id="container" class="playerBoard"></div>
-      </div>
-      <div class="computerBoardWrap">
-        <div class="computerBoard"></div>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Battleship</title>
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <img class="title" src="./Images/battleshipTitle.png" alt="Battleship">
+  <div class="content">
+    <h3 class="heading">Your Board</h3>
+    <h3 class="heading">Computer Board</h3>
+    <div class="playerBoardWrap">
+      <div id="container" class="playerBoard"></div>
     </div>
-    <div class="winning-message" id="winningMessage">
-      <div id="winningMessageText"></div>
-      <button id="restartButton">Restart</button>
+    <div class="computerBoardWrap">
+      <div class="computerBoard"></div>
     </div>
-  </body>
+  </div>
+  <div class="winning-message" id="winningMessage">
+    <div id="winningMessageText"></div>
+    <button id="restartButton">Restart</button>
+  </div>
+</body>
+
 </html>

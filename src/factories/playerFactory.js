@@ -8,9 +8,9 @@ export default function Player(name) {
         createGameBoard() {
             this.playerGameBoard = new Gameboard();
         },
-        fireShot(x , y, gameboard) {
+        fireShot(x, y, gameboard) {
             this.pastAttacks.push(`${[x, y]}`);
-            gameboard.receiveAttack(x,y);
+            gameboard.receiveAttack(x, y);
         }
     };
 }

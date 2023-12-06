@@ -7,7 +7,7 @@ export default function Ship(length) {
             this.hitNum += 1;
         },
         isSunk() {
-            if(this.hitNum === this.length) {
+            if (this.hitNum === this.length) {
                 this.sunk = true;
             }
         },

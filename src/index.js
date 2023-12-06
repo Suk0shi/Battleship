@@ -24,7 +24,7 @@ function setupGame() {
     instruction.classList.add('instruction');
     instruction.textContent = 'Place Your Ships';
     body.appendChild(instruction);
-    playerCell.forEach(element => {element.addEventListener('click', (e) => cellPlaceShip(e.target, button, playerCell))});
+    playerCell.forEach(element => { element.addEventListener('click', (e) => cellPlaceShip(e.target, button, playerCell)) });
     computerPlaceShip5();
     computerPlaceShip4();
     computerPlaceShip3();
@@ -38,29 +38,29 @@ function computerPlaceShip5() {
     let z = Math.floor(Math.random() * 2);
 
     if (z === 0) {
-        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,y]}`) !== -1
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,(+y)+1]}`) !== -1
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,(+y)+2]}`) !== -1 
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,(+y)+3]}`) !== -1 
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,(+y)+4]}`) !== -1 
+        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, y]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, (+y) + 1]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, (+y) + 2]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, (+y) + 3]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, (+y) + 4]}`) !== -1
         ) || x === null) {
             x = Math.floor(Math.random() * 10);
             y = Math.floor(Math.random() * 6);
         }
-        computerPlayer.computerGameBoard.placeShip5(x,y, true);
+        computerPlayer.computerGameBoard.placeShip5(x, y, true);
     }
     else if (z === 1) {
-        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,y]}`) !== -1
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x)+1,y]}`) !== -1
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x)+2,y]}`) !== -1 
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x)+3,y]}`) !== -1 
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x)+4,y]}`) !== -1 
+        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, y]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x) + 1, y]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x) + 2, y]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x) + 3, y]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x) + 4, y]}`) !== -1
         ) || x === null) {
             x = Math.floor(Math.random() * 6);
             y = Math.floor(Math.random() * 10);
         }
-        computerPlayer.computerGameBoard.placeShip5(x,y, false);
-    } 
+        computerPlayer.computerGameBoard.placeShip5(x, y, false);
+    }
 }
 
 function computerPlaceShip4() {
@@ -69,27 +69,27 @@ function computerPlaceShip4() {
     let z = Math.floor(Math.random() * 2);
 
     if (z === 0) {
-        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,y]}`) !== -1
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,(+y)+1]}`) !== -1
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,(+y)+2]}`) !== -1 
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,(+y)+3]}`) !== -1 
+        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, y]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, (+y) + 1]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, (+y) + 2]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, (+y) + 3]}`) !== -1
         ) || x === null) {
             x = Math.floor(Math.random() * 10);
             y = Math.floor(Math.random() * 7);
         }
-        computerPlayer.computerGameBoard.placeShip4(x,y, true);
+        computerPlayer.computerGameBoard.placeShip4(x, y, true);
     }
     else if (z === 1) {
-        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,y]}`) !== -1
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x)+1,y]}`) !== -1
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x)+2,y]}`) !== -1 
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x)+3,y]}`) !== -1 
+        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, y]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x) + 1, y]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x) + 2, y]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x) + 3, y]}`) !== -1
         ) || x === null) {
             x = Math.floor(Math.random() * 7);
             y = Math.floor(Math.random() * 10);
         }
-        computerPlayer.computerGameBoard.placeShip4(x,y, false);
-    } 
+        computerPlayer.computerGameBoard.placeShip4(x, y, false);
+    }
 }
 
 function computerPlaceShip3() {
@@ -98,25 +98,25 @@ function computerPlaceShip3() {
     let z = Math.floor(Math.random() * 2);
 
     if (z === 0) {
-        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,y]}`) !== -1
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,(+y)+1]}`) !== -1
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,(+y)+2]}`) !== -1 
+        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, y]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, (+y) + 1]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, (+y) + 2]}`) !== -1
         ) || x === null) {
             x = Math.floor(Math.random() * 10);
             y = Math.floor(Math.random() * 8);
         }
-        computerPlayer.computerGameBoard.placeShip3(x,y, true);
+        computerPlayer.computerGameBoard.placeShip3(x, y, true);
     }
     else if (z === 1) {
-        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,y]}`) !== -1
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x)+1,y]}`) !== -1
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x)+2,y]}`) !== -1 
+        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, y]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x) + 1, y]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x) + 2, y]}`) !== -1
         ) || x === null) {
             x = Math.floor(Math.random() * 8);
             y = Math.floor(Math.random() * 10);
         }
-        computerPlayer.computerGameBoard.placeShip3(x,y, false);
-    } 
+        computerPlayer.computerGameBoard.placeShip3(x, y, false);
+    }
 }
 
 function computerPlaceShip2() {
@@ -125,23 +125,23 @@ function computerPlaceShip2() {
     let z = Math.floor(Math.random() * 2);
 
     if (z === 0) {
-        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,y]}`) !== -1
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,(+y)+1]}`) !== -1
+        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, y]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, (+y) + 1]}`) !== -1
         ) || x === null) {
             x = Math.floor(Math.random() * 10);
             y = Math.floor(Math.random() * 9);
         }
-        computerPlayer.computerGameBoard.placeShip2(x,y, true);
+        computerPlayer.computerGameBoard.placeShip2(x, y, true);
     }
     else if (z === 1) {
-        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x,y]}`) !== -1
-        || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x)+1,y]}`) !== -1
+        while ((computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[x, y]}`) !== -1
+            || computerPlayer.computerGameBoard.shipsLocation.indexOf(`${[(+x) + 1, y]}`) !== -1
         ) || x === null) {
             x = Math.floor(Math.random() * 9);
             y = Math.floor(Math.random() * 10);
         }
-        computerPlayer.computerGameBoard.placeShip2(x,y, false);
-    } 
+        computerPlayer.computerGameBoard.placeShip2(x, y, false);
+    }
 }
 
 function cellPlaceShip(element, button, playerCell) {
@@ -149,21 +149,21 @@ function cellPlaceShip(element, button, playerCell) {
     let y = element.getAttribute("data-y");
     let shipAmount = player.playerGameBoard.shipsLocation.length;
     if (shipAmount === 0) {
-        player.playerGameBoard.placeShip5((+x),(+y), isVertical);
+        player.playerGameBoard.placeShip5((+x), (+y), isVertical);
     }
     else if (shipAmount === 5) {
-        player.playerGameBoard.placeShip4((+x),(+y), isVertical);
-    } 
+        player.playerGameBoard.placeShip4((+x), (+y), isVertical);
+    }
     else if (shipAmount === 9) {
-        player.playerGameBoard.placeShip3((+x),(+y), isVertical);
+        player.playerGameBoard.placeShip3((+x), (+y), isVertical);
     }
     else if (shipAmount === 12) {
-        player.playerGameBoard.placeShip3((+x),(+y), isVertical);
+        player.playerGameBoard.placeShip3((+x), (+y), isVertical);
     }
     else if (shipAmount === 15) {
-        player.playerGameBoard.placeShip2((+x),(+y), isVertical);
+        player.playerGameBoard.placeShip2((+x), (+y), isVertical);
     }
-    
+
     updatePlayerBoard();
     shipAmount = player.playerGameBoard.shipsLocation.length;
 
@@ -177,7 +177,7 @@ function cellPlaceShip(element, button, playerCell) {
             element.classList.add("three");
             element.classList.remove("four");
         })
-    } 
+    }
     else if (shipAmount === 15) {
         playerCell.forEach(element => {
             element.classList.add("two");
@@ -191,7 +191,7 @@ function cellPlaceShip(element, button, playerCell) {
         createComputerBoard();
         createPlayerBoard();
         updatePlayerBoard();
-        document.querySelectorAll('.playerCellVertical').forEach(element => {element.classList.remove("playerCellVertical")});
+        document.querySelectorAll('.playerCellVertical').forEach(element => { element.classList.remove("playerCellVertical") });
         instruction.textContent = `Player's Turn`;
     }
 }
@@ -217,12 +217,12 @@ function createPlayerBoard() {
     let playerBoard = document.querySelector('.playerBoard');
     for (let i = 0; i < 10; i++) {
         for (let j = 0; j < 10; j++) {
-          let cell = document.createElement("div");
-          cell.classList.add("cell");
-          cell.classList.add("playerCellVertical");
-          cell.setAttribute("data-x", j);
-          cell.setAttribute("data-y", i);
-          playerBoard.appendChild(cell);
+            let cell = document.createElement("div");
+            cell.classList.add("cell");
+            cell.classList.add("playerCellVertical");
+            cell.setAttribute("data-x", j);
+            cell.setAttribute("data-y", i);
+            playerBoard.appendChild(cell);
         }
     }
 }
@@ -231,16 +231,16 @@ function createComputerBoard() {
     let computerBoard = document.querySelector('.computerBoard');
     for (let i = 0; i < 10; i++) {
         for (let j = 0; j < 10; j++) {
-          let cell = document.createElement("div");
-          cell.classList.add("cell");
-          cell.setAttribute("data-x", j);
-          cell.setAttribute("data-y", i);
-          cell.addEventListener("click", (e) => {
+            let cell = document.createElement("div");
+            cell.classList.add("cell");
+            cell.setAttribute("data-x", j);
+            cell.setAttribute("data-y", i);
+            cell.addEventListener("click", (e) => {
                 if (computerTurn === false && !(e.target.classList.contains('hit') || e.target.classList.contains('miss'))) {
                     attackEvent(e.target);
                 }
             });
-          computerBoard.appendChild(cell);
+            computerBoard.appendChild(cell);
         }
     }
 }
@@ -249,11 +249,11 @@ function createTempComputerBoard() {
     let computerBoard = document.querySelector('.computerBoard');
     for (let i = 0; i < 10; i++) {
         for (let j = 0; j < 10; j++) {
-          let cell = document.createElement("div");
-          cell.classList.add("cell");
-          cell.setAttribute("data-x", j);
-          cell.setAttribute("data-y", i);
-          computerBoard.appendChild(cell);
+            let cell = document.createElement("div");
+            cell.classList.add("cell");
+            cell.setAttribute("data-x", j);
+            cell.setAttribute("data-y", i);
+            computerBoard.appendChild(cell);
         }
     }
 }
@@ -263,7 +263,7 @@ async function attackEvent(element) {
     let y = element.getAttribute("data-y");
     let playerHit = false;
     let computerMiss = false;
-    
+
     player.fireShot(x, y, computerPlayer.computerGameBoard);
     if (computerPlayer.computerGameBoard.shipsLocation.indexOf(player.pastAttacks[player.pastAttacks.length - 1]) !== -1) {
         //triggers if the fired shot hit
@@ -278,7 +278,7 @@ async function attackEvent(element) {
     if (playerHit === false) {
         computerTurn = true;
         instruction.textContent = `Computer's Turn`;
-        while (computerMiss === false) {    
+        while (computerMiss === false) {
             await delay(2000);
             computerPlayer.fireShot(player.playerGameBoard);
             if (player.playerGameBoard.shipsLocation.indexOf(computerPlayer.pastAttacks[computerPlayer.pastAttacks.length - 1]) !== -1) {
@@ -388,11 +388,11 @@ function updatePlayerBoard(board = player.playerGameBoard) {
 function clearBoards() {
     let container = document.querySelector('.playerBoard');
     while (container.firstChild) {
-    container.removeChild(container.firstChild);
+        container.removeChild(container.firstChild);
     }
     container = document.querySelector('.computerBoard');
     while (container.firstChild) {
-    container.removeChild(container.firstChild);
+        container.removeChild(container.firstChild);
     }
     if (document.querySelector('.button')) {
         document.querySelector('.button').remove();
