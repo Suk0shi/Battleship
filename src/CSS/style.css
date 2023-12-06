@@ -1,24 +1,186 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(/src/Fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url(/src/Fonts/Roboto-Medium.ttf);
+    font-weight: bold;
+}
+
+:root {
+    --ship: rgb(0, 0, 216);
+    --hit: rgb(196, 0, 0);
+    --sunk: rgb(128, 0, 0);
+    --miss: grey;
+    --background: rgb(0, 0, 91);
+}
+
+* {
+    font-family: 'Roboto';
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    background-color: var(--background);
+    color: rgb(189, 191, 193);
+}
+
+h3 {
+    margin: 0;
+}
+
+.heading {
+    font-family: 'RobotoMedium';
+}
+
+.title {
+    margin: 20px;
+    height: 100px;
+    width: 400px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
 .playerBoard,
 .computerBoard {
     display: grid;
     grid-template-columns: repeat(10, 25px);
+    gap: 3px;
+    background-color: rgba(0, 0, 91, 0.713);
+}
+
+.playerBoardWrap,
+.computerBoardWrap {
+    background-image: url(/dist/Images/radarGif.gif);
+    background-position: center;
 }
 
 .cell {
     border-style: solid;
     width: 20px;
     height: 20px;
+    border-color: rgb(189, 191, 193);
 }
 
 .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    column-gap: 8vw;
+    justify-items: center;
+    align-self: center;
+    margin-top: 30px;
 }
 
-.hit {
-    background-color: red;
+.button {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--background);
+    font-weight: 1000;
+    border-style: none;
 }
 
 .miss {
-    background-color: grey;
+    background-color: var(--miss);
+}
+
+.hit {
+    background-color: var(--hit);
+}
+
+.ship {
+    background-color: var(--ship);
+}
+
+.shipSunk {
+    background-color: var(--sunk);
+}
+
+.computerShot {
+    background-color: var(--miss);
+}
+
+.computerShot.ship {
+    background-color: var(--hit);
+}
+
+.computerShot.ship.shipSunk {
+    background-color: var(--sunk);
+}
+
+.winning-message {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: blue;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 5rem;
+	font-family: 'Courier New', Courier, monospace;
+	flex-direction: column;
+}
+
+.winning-message.show {
+	display: flex;
+}
+
+.playerCellVertical:hover {
+    background-color: var(--ship);
+    height: 523%;
+    
+}
+
+.playerCellHorizontal:hover {
+    background-color: var(--ship);
+    width: 523%;
+}
+
+.playerCellVertical.four:hover {
+    background-color: var(--ship);
+    height: 410%;
+}
+
+.playerCellHorizontal.four:hover {
+    background-color: var(--ship);
+    width: 410%;
+}
+
+.playerCellVertical.three:hover {
+    background-color: var(--ship);
+    height: 300%;
+}
+
+.playerCellHorizontal.three:hover {
+    background-color: var(--ship);
+    width: 300%;
+}
+
+.playerCellVertical.two:hover {
+    background-color: var(--ship);
+    height: 190%;
+}
+
+.playerCellHorizontal.two:hover {
+    background-color: var(--ship);
+    width: 190%;
+}
+
+.instruction {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 30px;
+    border-style: solid;
+    border-radius: 20px;
+    height: 60px;
+    width: 300px;
 }
