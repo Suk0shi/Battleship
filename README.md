@@ -2,6 +2,8 @@
 View Live Here:
 https://suk0shi.github.io/Battleship/
 
+A battleship game made with vanilla Javascript and CSS.
+
 Features:
 - Lay ships in the building phase
 - The computer will randomly generate its ship layout
